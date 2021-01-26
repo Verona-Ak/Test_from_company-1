@@ -1,0 +1,35 @@
+.form {
+    position: relative;
+    &__input-text {
+        width: 520px;
+        height: 40px;
+        padding: 11px 53px 15px 20px;
+        background: #FFFFFF;
+        border: 1px solid #E1CEBE;
+        border-radius: 3px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        color: #E1CEBE;
+        outline: none;
+        &::placeholder {
+            color: #E1CEBE;
+            font-size: 12px;
+        }
+    }
+    &__btn-search {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 9px;
+        background-color: transparent;
+        cursor: pointer;
+        img {
+            width: 24px;
+            height: 24px;
+        }
+        &:active, &:focus {
+            outline: none;
+        }
+    }
+}

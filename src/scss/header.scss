@@ -1,0 +1,102 @@
+.header {
+    &__inf {
+        background-color: #EBEDEE;
+        height: 40px;
+    }
+    &__anchors {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+    }
+    &__anchor{
+        display: block;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        color: #404040;
+        margin-right: 52px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__phones {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+    }
+    &__link {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        color: #404040;
+        margin-right: 36px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__main {
+        background-color: #fff;
+        height: 121px;
+    }
+    &__logo {
+        display: block;
+        width: 127px;
+        height: 101px;
+        margin-top: 4px;
+    }
+    &__car {
+        margin-top: 23px;
+        width: 137px;
+        height: 78px;
+        background-color: #EBEDEE;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+    }
+    &__car-logo {
+        display: block;
+        width: 41px;
+        height: 41px;
+        margin-right: 16px;
+    }
+    &__quantity-in-car {
+        background-color: #BED1E1;
+        width: 43px;
+        height: 25px;
+        border-radius: 3px;
+        text-align: center;
+        padding: 7px 0;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        color: #404040;
+    }
+    &__center-block {
+        margin-top: 27px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: 57px;
+    }
+    &__text {
+        width: 520px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 21px;
+        letter-spacing: 0.02em;
+        color: #404040;
+    }
+    &__form {
+        margin-top: 13px;
+    }
+    &__nav {
+        background-color: #E1CEBE;
+        height: 60px;
+    }
+
+}

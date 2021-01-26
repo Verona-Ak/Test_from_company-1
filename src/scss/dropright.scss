@@ -1,0 +1,29 @@
+.drop {
+    position: relative;
+    &__menu {
+        display: none;
+        position: absolute;
+        top: -22px;
+        left: 232px;
+        z-index: 2;
+        width: 268px;
+        height: 168px;
+        padding: 9px 13px 9px 25px;
+        background-color: #fff;
+        &-active {
+            display: block;
+        }
+    }
+    &__link {
+        display: block;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #404040;
+        margin-top: 15px;
+        &:hover {
+            color: #566E98;
+        }
+    }
+}

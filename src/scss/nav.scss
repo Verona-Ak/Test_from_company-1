@@ -1,0 +1,87 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 100%;
+    &__list {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    &__link  {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+        width: 164px;
+        height: 41px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 21px;
+        color: #404040;
+        &:hover {
+            border-radius: 3px;
+            background-color: #ffffff;
+        }
+    }
+    &-catalog {
+        padding: 26px 7px 34px 28px;
+        width: 260px;
+        height: 814px;
+        background-color: #BED1E1;
+        border-radius: 3px;
+        &__title {
+            margin: 0;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            color: #404040;
+        }
+        &__list {
+            margin-top: 25px;
+        }
+        &__item {
+            margin-top: 23px;
+        }
+        &__link {
+            h5 {
+                margin: 0;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 19px;
+                color: #404040;
+            }
+        }
+        &__btn {
+            position: relative;
+            width: 100%;
+            text-align-last: left;
+            background-color: transparent;
+            h5 {
+                margin: 0;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 19px;
+                color: #404040;
+            }
+            &::after {
+                content: url(../img/main/aside/chevron-black.svg);
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            &:hover {
+                h5 {
+                    color: #FFFFFF;
+                }
+                &::after {
+                    content: url(../img/main/aside/chevron-white.svg);
+                }
+            }
+        }
+    }
+}

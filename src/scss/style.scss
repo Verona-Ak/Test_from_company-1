@@ -1,0 +1,60 @@
+*, ::before, ::after {
+    font-family: 'Fira Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    box-sizing: border-box;
+    border: none;
+}
+// font-family: 'Montserrat Alternates', sans-serif;
+
+@import 'header.scss';
+@import 'form.scss';
+@import 'nav.scss';
+@import 'carousel.scss';
+@import 'main.scss';
+@import 'goods.scss';
+@import 'promotion.scss';
+@import 'dropright.scss';
+@import 'sidebar.scss';
+@import 'about.scss';
+@import 'footer.scss';
+@import 'contacts.scss';
+
+a {
+    text-decoration: none;
+    &:active, &:focus {
+        outline: none;
+    }
+    &:hover {
+        color: #404040;
+    }
+
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    &:active, &:focus {
+        outline: none;
+    }
+}
+li, ol, ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none
+}
+.container {
+    padding: 0;
+    margin: 0 auto;
+    width: 1097px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-fs {
+        align-items: flex-start; 
+    }
+}

@@ -1,0 +1,20 @@
+.about {
+    margin: 0;
+    margin-top: 54px;
+    &__title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        color: #404040;
+    }
+    &__paragraph {
+        margin: 0;
+        margin-top: 30px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 21px;
+        letter-spacing: 0.02em;
+        color: #404040;
+    }
+}

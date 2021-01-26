@@ -1,0 +1,70 @@
+.carousel {
+    width: 830px;
+    height: 450px;
+}
+.carousel-control-prev-icon {
+    background-image: url(../img/main/carousel/chevron-left-blue.svg);
+    width: 21px;
+    height: 35px;
+    
+}
+.carousel-control-next-icon {
+    background-image: url(../img/main/carousel/chevron-right-blue.svg);
+    width: 21px;
+    height: 35px;
+    
+}
+.carousel-control-prev {
+    width: 70px;
+    opacity: 1;
+    &:hover {
+        background-color: rgba(#E1CEBE, .6);
+        .carousel-control-prev-icon {
+            background-image: url(../img/main/carousel/chevron-left.svg);
+        }
+    }
+}
+.carousel-control-next {
+    width: 70px;
+    opacity: 1;
+    &:hover {
+        background-color: rgba(#E1CEBE, .6);
+        .carousel-control-next-icon {
+            background-image: url(../img/main/carousel/chevron-right.svg);
+        }
+    }
+}
+.carousel-indicators {
+    li {
+        width: 34px;
+        height: 10px;
+        border: none;
+        border-radius: 6px;
+        margin-bottom: 19px;
+        background-color: #566E98;
+        opacity: 1;
+    }
+    .active {
+        background-color: #FFFFFF;
+    }
+}
+.carousel-caption {
+    bottom: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    right: 0;
+    left: 50%;
+    width: 665px;
+    height: 114px;
+    background-color: rgba(#404040, .3);
+    text-align: center;
+    padding: 38px 0 47px;
+}
+.carousel__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0;
+}

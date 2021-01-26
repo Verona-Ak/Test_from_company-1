@@ -1,0 +1,21 @@
+.footer {
+    background-color: #BED1E1;
+    height: 231px;
+    &__logo {
+        display: block;
+        width: 127px;
+        height: 101px;
+    }
+    &__top {
+        height: 130px;
+    }
+    &__bottom {
+        height: 101px;
+    }
+    &__line {
+        margin: 0 auto;
+        width: 1115px;
+        height: 1px;
+        background-color:rgba(255, 255, 255, 0.2);
+    }
+}
