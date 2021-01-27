@@ -12,19 +12,67 @@ window.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // drop menu
+    let dropMenu = document.createElement('ul');
+    dropMenu.classList.add('drop__menu');
+
+    dropMenu.innerHTML = `<li class="drop__item"><a href="#" class="drop__link">Подкатегория</a></li><li class="drop__item"><a href="#" class="drop__link">Подкатегория ховер</a></li><li class="drop__item"><a href="#" class="drop__link">Длинное название подкатегории</a></li><li class="drop__item"><a href="#" class="drop__link">Подкатегория 2</a></li>`;
 
     const dropBtns = document.querySelectorAll('.drop__btn'),
-        dropMenu = document.querySelector('.drop__menu');
+        arrows = document.querySelectorAll('.drop__img');
     
     for (let btn of dropBtns) {
         btn.addEventListener('click', ()=> {
+            let count = 0;
+            while(count < dropBtns.length) {
+                clearStyle(dropBtns[count], arrows[count]);
+                count++;
+            }
+
             let parent = btn.closest('li');
             parent.appendChild(dropMenu);
             dropMenu.classList.add('drop__menu-active');
+            btn.style.color = '#FFFFFF';
 
+
+            for(let i = 0; i < arrows.length; i++) {
+                if(arrows[i].closest('li') === parent) {
+                    arrows[i].src = 'img/main/aside/chevron-white.svg';
+                }
+            }
         });
     }
+    function clearStyle(btn, arrow) {
+        btn.style.color = '';
+        arrow.src = 'img/main/aside/chevron-black.svg';
+    }
 
-    
+    window.addEventListener('click', function(e) {
+        let index = true;
+        for(let btn of dropBtns) {
+            if(e.target && e.target === btn) {
+                index = !index;
+                break;
+            }
+        }
+        if(index) {
+            for(let item of dropBtns) {
+                item.style.color = '';
+            }
+            for(let arrow of arrows) {
+                arrow.src = 'img/main/aside/chevron-black.svg';
+            }
+            try{
+                dropMenu.classList.remove('drop__menu-active');
+                let parent = dropMenu.closest('li');
+                parent.removeChild(dropMenu);
+            } catch(e) {
+                console.log(`Поймана ошибка: ${e}`);
 
+                
+            }
+            
+        }
+        
+    });
 });

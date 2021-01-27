@@ -1,5 +1,18 @@
 .drop {
     position: relative;
+    &__btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    &__img {
+        position: absolute;
+        top: 4px;
+        right: 0;
+        display: block;
+        width: 6px;
+        height: 10px;
+    }
     &__menu {
         display: none;
         position: absolute;
@@ -22,7 +35,7 @@
         line-height: 17px;
         color: #404040;
         margin-top: 15px;
-        &:hover {
+        &:active {
             color: #566E98;
         }
     }

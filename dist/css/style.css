@@ -885,6 +885,21 @@ progress {
   position: relative;
 }
 
+.drop__btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.drop__img {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  display: block;
+  width: 6px;
+  height: 10px;
+}
+
 .drop__menu {
   display: none;
   position: absolute;
@@ -911,7 +926,7 @@ progress {
   margin-top: 15px;
 }
 
-.drop__link:hover {
+.drop__link:active {
   color: #566E98;
 }
 
@@ -1074,7 +1089,7 @@ progress {
 }
 
 .nav-catalog {
-  padding: 26px 7px 34px 28px;
+  padding: 26px 14px 34px 28px;
   width: 260px;
   height: 814px;
   background-color: #BED1E1;
@@ -1082,8 +1097,6 @@ progress {
 }
 
 .nav-catalog__title {
-  margin: 0;
-  font-style: normal;
   font-weight: 500;
   font-size: 24px;
   color: #404040;
@@ -1098,8 +1111,6 @@ progress {
 }
 
 .nav-catalog__link h5 {
-  margin: 0;
-  font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 19px;
@@ -1110,31 +1121,11 @@ progress {
   display: block;
   position: relative;
   width: 100%;
-  -moz-text-align-last: left;
-       text-align-last: left;
-  background-color: transparent;
-  margin: 0;
-  font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 19px;
   color: #404040;
   cursor: pointer;
-}
-
-.nav-catalog__category::after {
-  content: url(../img/main/aside/chevron-black.svg);
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.nav-catalog__category:hover {
-  color: #FFFFFF;
-}
-
-.nav-catalog__category:hover::after {
-  content: url(../img/main/aside/chevron-white.svg);
 }
 
 a {
