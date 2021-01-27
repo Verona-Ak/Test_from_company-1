@@ -7,35 +7,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700&family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
     <title>BRAND</title>
 </head>
 <body>
     <header class="header">
         <div class="header__inf">
-            <div class="container">
+            <div class="container justify-content-between align-items-center">
                 <div class="header__anchors">
                     <a href="#" class="header__anchor">Новости</a>
                     <a href="#" class="header__anchor">Вопрос-ответ</a>
                     <a href="#" class="header__anchor">О компании</a>
                 </div>
                 <div class="header__phones">
-                    <a href="tel:+73830000000" class="header__link">+7 (383) 000-00-00</a>
-                    <a href="tel:+73830000000" class="header__link">+7 (383) 000-00-00</a>
+                    <a href="tel:+73830000000" class="header__link">
+                        <h4>+7 (383) 000-00-00</h4>
+                    </a>
+                    <a href="tel:+73830000000" class="header__link">
+                        <h4>+7 (383) 000-00-00</h4>
+                    </a>
                 </div>
             </div>
         </div>
         <div class="header__main">
-            <div class="container container-fs">
+            <div class="container justify-content-between align-items-end">
                 <img class="header__logo" src="img/header/logo_header.svg" alt="logo">
                 <div class="header__center-block">
-                    <div class="header__text">
-                        Текст слогана или описание деятельности компании
-                    </div>
+                    <div class="header__text">Текст слогана или описание деятельности компании</div>
 
                     <form class="form header__form">
                         <input class="form__input-text" type="text" name="field" placeholder="Найти товар ...">
-                        <button class="form__btn-search" type="button" name="search">
+                        <button class="form__btn-search" type="submit" name="search">
                             <img src="img/header/search_icon.svg" alt="search">
                         </button>
                     </form>
@@ -43,7 +46,7 @@
                 
                 <div class="header__car">
                     <img class="header__car-logo" src="img/header/car.svg" alt="car">
-                    <div class="header__quantity-in-car">0</div>
+                    <div class="header__quantity-in-car"><h5>0</h5></div>
                 </div>
             </div>
         </div>
@@ -52,22 +55,22 @@
                 <nav class="nav">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a class="nav__link"href="#">Главная</a>
+                            <a class="nav__link" href="#"><h4>Главная</h4></a>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link" href="#">Доставка и оплата</a>
+                            <a class="nav__link" href="#"><h4>Доставка и оплата</h4></a>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link" href="#">Услуги</a>
+                            <a class="nav__link" href="#"><h4>Услуги</h4></a>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link" href="#">Акции</a>
+                            <a class="nav__link" href="#"><h4>Акции</h4></a>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link" href="#">Контакты</a>
+                            <a class="nav__link" href="#"><h4>Контакты</h4></a>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link" href="#">Дизайнерам</a>
+                            <a class="nav__link" href="#"><h4>Дизайнерам</h4></a>
                         </li>
                     </ul>
                 </nav>
@@ -78,7 +81,7 @@
     </header>
 
     <main role="main" class="main">
-        <div class="container align-items-start">
+        <div class="container justify-content-between align-items-start">
             <div class="main__side">
                 
                 <nav class="nav-catalog">
@@ -90,9 +93,7 @@
                             </a>
                         </li>
                         <li class="nav-catalog__item drop">
-                            <button type="button" class="nav-catalog__btn drop__btn">
-                                <h5>Категория товаров</h5> 
-                            </button>
+                            <h5 class="nav-catalog__category drop__btn">Категория товаров</h5> 
                             <ul class="drop__menu">
                                 <li class="drop__item">
                                     <a href="#" class="drop__link">Подкатегория</a>
@@ -107,78 +108,62 @@
                                     <a href="#" class="drop__link">Подкатегория 2</a>
                                 </li>
                             </ul>
-
                         </li>
 
                         <li class="nav-catalog__item drop">
-                            <button type="button" class="nav-catalog__btn drop__btn">
-                                <h5>Тут длинное название<br>категории товаров</h5> 
-                            </button>
+                            <h5 class="nav-catalog__category drop__btn">Тут длинное название<br>категории товаров</h5> 
                         </li>
+
                         <li class="nav-catalog__item drop">
-                            <button type="button" class="nav-catalog__btn drop__btn">
-                                <h5>Категория 1</h5> 
-                            </button>
+                            <h5 class="nav-catalog__category drop__btn">Категория 1</h5> 
                         </li>
+
                         <li class="nav-catalog__item drop">
-                            <button type="button" class="nav-catalog__btn drop__btn">
-                                <h5>Категория 2</h5> 
-                            </button>
+                            <h5 class="nav-catalog__category drop__btn">Категория 2</h5> 
                         </li>
+
                         <li class="nav-catalog__item drop">
-                            <button type="button" class="nav-catalog__btn drop__btn">
-                                <h5>Категория 3</h5> 
-                            </button>
+                            <h5 class="nav-catalog__category drop__btn">Категория 3</h5> 
                         </li>
+
                         <li class="nav-catalog__item drop">
-                            <button type="button" class="nav-catalog__btn drop__btn">
-                                <h5>Категория 4</h5> 
-                            </button>
+                            <h5 class="nav-catalog__category drop__btn">Категория 4</h5> 
                         </li>
+
                         <li class="nav-catalog__item drop">
-                            <button type="button" class="nav-catalog__btn drop__btn">
-                                <h5>Категория 5</h5> 
-                            </button>
+                            <h5 class="nav-catalog__category drop__btn">Категория 5</h5> 
                         </li>
+
                         <li class="nav-catalog__item drop">
-                            <button type="button" class="nav-catalog__btn drop__btn">
-                                <h5>Категория 6</h5> 
-                            </button>
+                            <h5 class="nav-catalog__category drop__btn">Категория 6</h5> 
                         </li>
+
                         <li class="nav-catalog__item drop">
-                            <button type="button" class="nav-catalog__btn drop__btn">
-                                <h5>Категория 7</h5> 
-                            </button>
+                            <h5 class="nav-catalog__category drop__btn">Категория 7</h5> 
                         </li>
+
                         <li class="nav-catalog__item drop">
-                            <button type="button" class="nav-catalog__btn drop__btn">
-                                <h5>Категория 8</h5> 
-                            </button>
+                            <h5 class="nav-catalog__category drop__btn">Категория 8</h5> 
                         </li>
+
                         <li class="nav-catalog__item drop">
-                            <button type="button" class="nav-catalog__btn drop__btn">
-                                <h5>Категория 10</h5> 
-                            </button>
+                            <h5 class="nav-catalog__category drop__btn">Категория 10</h5> 
                         </li>
+
                         <li class="nav-catalog__item drop">
-                            <button type="button" class="nav-catalog__btn drop__btn">
-                                <h5>Тут длинное название<br>категории товаров 2</h5> 
-                            </button>
+                            <h5 class="nav-catalog__category drop__btn">Тут длинное название<br>категории товаров 2</h5> 
                         </li>
+
                         <li class="nav-catalog__item drop">
-                            <button type="button" class="nav-catalog__btn drop__btn">
-                                <h5>Тут длинное название<br>категории товаров 3</h5> 
-                            </button>
+                            <h5 class="nav-catalog__category drop__btn">Тут длинное название<br>категории товаров 3</h5> 
                         </li>
+
                         <li class="nav-catalog__item drop">
-                            <button type="button" class="nav-catalog__btn drop__btn">
-                                <h5>Категория 11</h5> 
-                            </button>
+                            <h5 class="nav-catalog__category drop__btn">Категория 11</h5> 
                         </li>
+
                         <li class="nav-catalog__item drop">
-                            <button type="button" class="nav-catalog__btn drop__btn">
-                                <h5>Категория 12</h5> 
-                            </button>
+                            <h5 class="nav-catalog__category drop__btn">Категория 12</h5> 
                         </li>
                     </ul>
                 </nav>
@@ -255,13 +240,16 @@
                             <div class="goods__line goods__line-2"></div>
                             <div class="goods__add">
                                 <div class="goods__quantity">
-                                    <img class="goods__min" src="img/main/goods/minus.svg" alt="minus">
+                                    <button type="button" class="goods__min">
+                                        <img src="img/main/goods/minus.svg" alt="minus">
+                                    </button>
                                     <h4>1</h4>
-                                    <img class="goods__pl" src="img/main/goods/plus.svg" alt="plus">
+                                    <button type="button" class="goods__pl">
+                                        <img src="img/main/goods/plus.svg" alt="plus">
+                                    </button>
                                 </div>
-                                <button type="button" class="goods__btn">
-                                    <h5>В корзину</h5> 
-                                </button>
+
+                                <button type="button" class="goods__btn">В корзину</button>
                             </div>
                         </div>
                         <div class="goods__item">
@@ -276,9 +264,7 @@
                                     <h4>1</h4>
                                     <img class="goods__pl" src="img/main/goods/plus.svg" alt="plus">
                                 </div>
-                                <button type="button" class="goods__btn">
-                                    <h5>В корзину</h5> 
-                                </button>
+                                <button type="button" class="goods__btn">В корзину</button>
                             </div>
                         </div>
                         <div class="goods__item">
@@ -293,9 +279,7 @@
                                     <h4>1</h4>
                                     <img class="goods__pl" src="img/main/goods/plus.svg" alt="plus">
                                 </div>
-                                <button type="button" class="goods__btn">
-                                    <h5>В корзину</h5> 
-                                </button>
+                                <button type="button" class="goods__btn">В корзину</button>
                             </div>
                         </div>
                     </div>
@@ -310,16 +294,16 @@
                             <a class="promotion__link" href="#">
                                 <h4 class="promotion__descr">Скидки до 70%!</h4>
                             </a>
-                            
                         </div>
+
                         <div class="promotion__item">
                             <img src="img/main/promotions/promotion_2.jpg" alt="promotion-2" class="promotion__img">
                             <div class="promotion__date">12.12.20</div>
                             <a class="promotion__link" href="#">
                                 <h4 class="promotion__descr">Супер-скидки месяца на популярные товары!</h4>
                             </a>
-                            
                         </div>
+
                         <div class="promotion__item">
                             <img src="img/main/promotions/promotion_3.jpg" alt="promotion-3" class="promotion__img">
                             <div class="promotion__date">12.12.20</div>
@@ -335,7 +319,6 @@
                     <p class="about__paragraph">
                         Равным образом постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. Товарищи! рамки и место обучения кадров требуют определения и уточнения новых предложений. Задача организации, в особенности же дальнейшее развитие различных форм деятельности способствует подготовки и реализации дальнейших направлений развития. С другой стороны сложившаяся структура организации позволяет выполнять важные задания по разработке модели развития.<br><br>
                         Равным образом постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. Товарищи! рамки и место обучения кадров требуют определения и уточнения новых предложений. Задача организации, в особенности же дальнейшее развитие различных форм деятельности способствует подготовки и реализации дальнейших направлений развития. С другой стороны сложившаяся структура организации позволяет выполнять важные задания по разработке модели развития.
-
                     </p>
                 </section>
             </div>
@@ -345,20 +328,17 @@
 
     <footer class="footer">
         <div class="footer__top">
-            <div class="container">
+            <div class="container justify-content-between align-items-center">
                 <img class="footer__logo-brand" src="img/footer/logo_footer.svg" alt="logo">
-                <address class="contacts">
+
+                <div class="footer__contacts contacts">
                     <div class="contacts__item">
                         <img class="contacts__icon" src="img/footer/location_marker.svg" alt="location">
-                        <p class="contacts__inf">
-                            г. Новосибирск,<br>ул. Новосибирская , 222
-                        </p>
+                        <p class="contacts__inf">г. Новосибирск,<br>ул. Новосибирская , 222</p>
                     </div>
                     <div class="contacts__item">
                         <img class="contacts__icon" src="img/footer/mail_marker.svg" alt="mail">
-                        <p class="contacts__inf">
-                            logo@mail.ru
-                        </p>
+                        <p class="contacts__inf">logo@mail.ru</p>
                     </div>
                     <div class="contacts__item">
                         <img class="contacts__icon" src="img/footer/phone_marker.svg" alt="phone">
@@ -367,14 +347,14 @@
                             +7 (383) 000-00-00
                         </h4>
                     </div>
-                </address>
+                </div>
             </div>
         </div>
         <div class="footer__line"></div>
         <div class="footer__bottom">
-            <div class="container">
+            <div class="container justify-content-between align-items-end">
                 <div class="footer__politics">
-                    <div class="">
+                    <div class="footer__copyright">
                         © 2020 logo.ru&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Политика конфиденциальности
                     </div>
                     <div class="footer__descr">

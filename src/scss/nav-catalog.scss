@@ -1,0 +1,56 @@
+.nav-catalog {
+    padding: 26px 7px 34px 28px;
+    width: 260px;
+    height: 814px;
+    background-color: #BED1E1;
+    border-radius: 3px;
+    &__title {
+        margin: 0;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        color: #404040;
+    }
+    &__list {
+        margin-top: 25px;
+    }
+    &__item {
+        margin-top: 23px;
+    }
+    &__link {
+        h5 {
+            margin: 0;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 19px;
+            color: #404040;
+        }
+    }
+    &__category {
+        display: block;
+        position: relative;
+        width: 100%;
+        text-align-last: left;
+        background-color: transparent;
+        margin: 0;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        color: #404040;
+        cursor: pointer;
+        &::after {
+            content: url(../img/main/aside/chevron-black.svg);
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        &:hover {
+            color: #FFFFFF;
+            &::after {
+                content: url(../img/main/aside/chevron-white.svg);
+            }
+        }
+    }
+}

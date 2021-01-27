@@ -17,7 +17,7 @@
 .carousel-control-prev {
     width: 70px;
     opacity: 1;
-    &:hover {
+    &:active {
         background-color: rgba(#E1CEBE, .6);
         .carousel-control-prev-icon {
             background-image: url(../img/main/carousel/chevron-left.svg);
@@ -27,7 +27,7 @@
 .carousel-control-next {
     width: 70px;
     opacity: 1;
-    &:hover {
+    &:active {
         background-color: rgba(#E1CEBE, .6);
         .carousel-control-next-icon {
             background-image: url(../img/main/carousel/chevron-right.svg);
@@ -66,5 +66,4 @@
     line-height: 29px;
     text-align: center;
     color: #FFFFFF;
-    margin: 0;
 }

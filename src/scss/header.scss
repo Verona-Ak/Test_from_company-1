@@ -7,11 +7,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 40px;
+        height: 100%;
     }
     &__anchor{
         display: block;
-        font-style: normal;
         font-weight: 500;
         font-size: 14px;
         color: #404040;
@@ -24,16 +23,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 40px;
+        height: 100%;
     }
     &__link {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        color: #404040;
-        margin-right: 36px;
+        display: block;
+        margin-right: 37px;
         &:last-child {
             margin-right: 0;
+        }
+        h4 {
+            font-weight: 500;
+            font-size: 16px;
+            color: #404040;
         }
     }
     &__main {
@@ -44,10 +45,10 @@
         display: block;
         width: 127px;
         height: 101px;
-        margin-top: 4px;
+        margin-bottom: 16px;
     }
     &__car {
-        margin-top: 23px;
+        margin-bottom: 20px;
         width: 137px;
         height: 78px;
         background-color: #EBEDEE;
@@ -68,14 +69,16 @@
         height: 25px;
         border-radius: 3px;
         text-align: center;
-        padding: 7px 0;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        color: #404040;
+        padding: 4px 0;
+        h5 {
+            font-weight: 500;
+            font-size: 14px;
+            color: #404040;
+        }
+        
     }
     &__center-block {
-        margin-top: 27px;
+        margin-bottom: 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -84,8 +87,6 @@
     }
     &__text {
         width: 520px;
-        font-style: normal;
-        font-weight: normal;
         font-size: 16px;
         line-height: 21px;
         letter-spacing: 0.02em;

@@ -1,12 +1,9 @@
 .goods {
     margin-top: 31px;
     &__title {
-        font-style: normal;
         font-weight: 500;
         font-size: 24px;
         line-height: 29px;
-        display: flex;
-        align-items: center;
         color: #404040;
     }
     &__cards {
@@ -17,11 +14,17 @@
     }
     &__item {
         position: relative;
+        box-sizing: content-box;
         width: 260px;
         height: 495px;
         background-color: #EBEDEE;
         border-bottom-left-radius: 3px;
         border-bottom-right-radius: 3px;
+        &_focus {
+            border: 2px solid #E1CEBE; 
+            border-radius: 3px; 
+            filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
+        }
     }
     &__img {
         display: block;
@@ -32,15 +35,11 @@
         width: 218px;
         margin: 0 auto;
         margin-top: 19px;
-        font-style: normal;
-        font-weight: normal;
         font-size: 16px;
         line-height: 21px;
         color: #404040;
     }
     &__price {
-        margin: 0;
-        font-style: normal;
         font-weight: 500;
         font-size: 16px;
         line-height: 21px;
@@ -62,10 +61,10 @@
         width: 236px;
         background-color: #fff;
         &-1 {
-            bottom: 153px;
+            bottom: 150px;
         }
         &-2{
-            bottom: 91px;
+            bottom: 87px;
         }
     }
     &__add {
@@ -82,47 +81,31 @@
         border-radius: 3px;
         margin-right: 16px;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         h4 {
-            margin: 0;
+            margin: 0 17px;
             display: block;
-            font-style: normal;
             font-weight: 500;
             font-size: 16px;
             color: #404040;
         }
     }
-    &__min {
-        display: block;
+    &__min, &__pl {
+        background-color: transparent;
         cursor: pointer;
     }
-    &__pl {
-        display: block;
-        width: 15px;
-        height: 15px;
-        cursor: pointer;
-    }
+
     &__btn {
         width: 119px;
         height: 40px;
         background-color: #BED1E1;
         border-radius: 3px;
-        &:active {
-            background-color:#E1CEBE;
-            .goods__item {
-                border: 2px solid #E1CEBE;
-                border-radius: 3px;
-                // filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
-            }
-        }
-        h5 {
-            margin: 0;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 14px;
-            color: #404040;
+        font-weight: 500;
+        font-size: 14px;
+        color: #404040;
+        &_focus {
+            background-color: #E1CEBE;
         }
     }
-    
 }
