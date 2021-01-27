@@ -573,15 +573,12 @@ progress {
 }
 
 .nav {
-  height: 100%;
-  width: 100%;
+  margin: 0 auto;
 }
 
 .nav__list {
-  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .nav__link {
@@ -709,10 +706,11 @@ progress {
 }
 
 .goods__cards {
-  margin-top: 21px;
+  margin-top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .goods__item {
@@ -723,6 +721,7 @@ progress {
   background-color: #EBEDEE;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
+  margin-top: 21px;
 }
 
 .goods__item_focus {
@@ -837,13 +836,14 @@ progress {
 }
 
 .promotion__cards {
-  margin-top: 15px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .promotion__item {
   position: relative;
+  margin-top: 15px;
 }
 
 .promotion__img {
@@ -926,7 +926,7 @@ progress {
   margin-top: 15px;
 }
 
-.drop__link:active {
+.drop__link:hover {
   color: #566E98;
 }
 
@@ -941,7 +941,6 @@ progress {
 
 .sidebar__title {
   margin-bottom: 8px;
-  font-style: normal;
   font-weight: 500;
   font-size: 24px;
   color: #404040;
@@ -951,23 +950,19 @@ progress {
   margin-top: 18px;
 }
 
-.sidebar__data {
+.sidebar__date {
   padding: 8px 0;
   width: 64px;
   height: 27px;
   background-color: #BED1E1;
   border-radius: 3px;
   text-align: center;
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
   color: #404040;
 }
 
 .sidebar__new-descr {
-  margin: 0;
   margin-top: 9px;
-  font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 19px;
@@ -1062,6 +1057,7 @@ progress {
 
 .contacts {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .contacts__item {
@@ -1070,7 +1066,7 @@ progress {
   margin-right: 144px;
 }
 
-.contacts__item:last-child {
+.contacts__item:nth-child(3) {
   margin-right: 0;
 }
 
@@ -1170,7 +1166,7 @@ li {
 .container {
   padding: 0;
   margin: 0 auto;
-  width: 1097px;
+  max-width: 1097px;
   height: 100%;
   display: flex;
 }
@@ -1194,6 +1190,162 @@ li {
 
   legend {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 95vw;
+  }
+
+  .header__center-block {
+    margin-left: 0;
+  }
+
+  .nav__link {
+    width: 120px;
+  }
+
+  .nav__item {
+    margin-right: 5px;
+  }
+
+  .nav__item:nth-child(2) .nav__link {
+    width: 150px;
+  }
+
+  .nav__item:last-child {
+    margin-right: 0;
+  }
+
+  .carousel {
+    width: 100%;
+    height: auto;
+  }
+
+  .carousel-caption {
+    width: 75%;
+    height: 25%;
+  }
+
+  .goods__cards {
+    justify-content: start;
+    align-items: flex-start;
+  }
+
+  .goods__item:nth-child(1) {
+    margin-right: 24px;
+  }
+
+  .promotion__cards {
+    justify-content: start;
+  }
+
+  .promotion__item:nth-child(1) {
+    margin-right: 25px;
+  }
+
+  .footer__line {
+    width: 90vw;
+  }
+
+  .main .container {
+    justify-content: center;
+  }
+
+  .main__content {
+    width: 60%;
+  }
+
+  .contacts {
+    width: 70%;
+    margin-right: 18px;
+    justify-content: space-between;
+  }
+
+  .contacts__item {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    width: 93vw;
+  }
+
+  .goods__item {
+    width: 220px;
+  }
+
+  .goods__item:nth-child(1) {
+    margin-right: 12px;
+  }
+
+  .goods__img {
+    width: 100%;
+    height: auto;
+  }
+
+  .goods__name {
+    font-size: 13px;
+    width: 80%;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .goods__line {
+    width: 90%;
+  }
+
+  .goods__line-1 {
+    bottom: 39%;
+  }
+
+  .goods__line-2 {
+    bottom: 131px;
+  }
+
+  .goods__add {
+    flex-direction: column;
+  }
+
+  .goods__btn {
+    margin-top: 10px;
+  }
+
+  .goods__quantity {
+    margin-right: 0;
+    height: 36px;
+  }
+
+  .goods .mt-65 {
+    margin-top: 62px;
+  }
+
+  .goods .mt-44 {
+    margin-top: 42px;
+  }
+
+  .contacts {
+    width: 56%;
+    margin-right: 18px;
+    justify-content: space-between;
+  }
+
+  .contacts__item {
+    margin-right: 0;
+  }
+
+  .contacts__item:nth-child(1) {
+    order: 1;
+  }
+
+  .contacts__item:nth-child(2) {
+    order: 3;
+  }
+
+  .contacts__item:nth-child(3) {
+    order: 2;
   }
 }
 

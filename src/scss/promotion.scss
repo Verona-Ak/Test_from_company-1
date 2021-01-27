@@ -6,13 +6,13 @@
         color: #404040;
     }
     &__cards {
-        margin-top: 15px;
         display: flex;
         justify-content: space-between;
-        
+        flex-wrap: wrap;
     }
     &__item {
         position: relative;
+        margin-top: 15px;
     }
     &__img {
         display: block;

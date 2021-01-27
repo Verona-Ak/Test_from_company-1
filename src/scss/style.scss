@@ -21,6 +21,7 @@
 @import 'footer.scss';
 @import 'contacts.scss';
 @import 'nav-catalog.scss';
+@import 'media.scss';
 
 a {
     text-decoration: none;
@@ -50,7 +51,7 @@ ol, ul, li{
 .container {
     padding: 0;
     margin: 0 auto;
-    width: 1097px;
+    max-width: 1097px;
     height: 100%;
     display: flex;
 }

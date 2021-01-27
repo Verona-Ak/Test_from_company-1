@@ -1,10 +1,11 @@
 .contacts {
     display: flex;
+    flex-wrap: wrap;
     &__item {
         display: flex;
         align-items: flex-start;
         margin-right: 144px;
-        &:last-child {
+        &:nth-child(3) {
             margin-right: 0;
         }
     }

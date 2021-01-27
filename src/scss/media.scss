@@ -1,0 +1,144 @@
+@media(max-width: 1200px) {
+    .container {
+        width: 95vw;
+    }
+    .header {
+        &__center-block {
+            margin-left: 0;
+        }
+    }
+    .nav {
+        &__link {
+            width: 120px;
+        }
+        &__item {
+            margin-right: 5px;
+            &:nth-child(2) {
+                .nav__link {
+                    width: 150px;
+                }
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    .carousel {
+        width: 100%;
+        height: auto;
+        &-caption {
+            width: 75%;
+            height: 25%;
+        }
+    }
+    .goods{
+        &__cards {
+            justify-content: start;
+            align-items: flex-start;
+        }
+        &__item {
+            &:nth-child(1) {
+                margin-right: 24px;
+            }
+        }
+    }
+    .promotion {
+        &__cards {
+            justify-content: start;
+            
+        }
+        &__item {
+            &:nth-child(1) {
+                margin-right: 25px;
+            }
+            
+        }
+    }
+    .footer {
+        &__line {
+            width: 90vw;
+        }
+    }
+    .main {
+        .container {
+            justify-content: center;
+        }
+        &__content {
+            width: 60%;
+        }
+    }
+    .contacts {
+        width: 70%;
+        margin-right: 18px;
+        justify-content: space-between;
+        &__item {
+            margin-right: 0;
+        }
+    }
+
+}
+@media(max-width: 991px) {
+    .container {
+        width: 93vw;
+    }
+    .goods {
+        &__item {
+            width: 220px;
+            &:nth-child(1) {
+                margin-right: 12px;
+            }
+        }
+        &__img {
+            width: 100%;
+            height: auto;
+        }
+        &__name {
+            font-size: 13px;
+            width: 80%;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+        &__line {
+            width: 90%;
+            &-1 {
+                bottom: 39%;
+            }
+            &-2 {
+                bottom: 131px;
+            }
+        }
+        &__add {
+            flex-direction: column;
+        }
+        &__btn {
+            margin-top: 10px;
+        }
+        &__quantity {
+            margin-right: 0;
+            height: 36px;
+        }
+        .mt-65 {
+            margin-top: 62px;
+        }
+        .mt-44 {
+            margin-top: 42px;
+        }
+    }
+    .contacts {
+        width: 56%;
+        margin-right: 18px;
+        justify-content: space-between;
+        &__item {
+            margin-right: 0;
+            &:nth-child(1) {
+                order: 1;
+            }
+            &:nth-child(2) {
+                order: 3;
+            }
+            &:nth-child(3) {
+                order: 2;
+            }
+        }
+    }
+}
