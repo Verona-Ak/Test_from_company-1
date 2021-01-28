@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
             let parent = btn.closest('li');
             parent.appendChild(dropMenu);
-            dropMenu.classList.add('drop__menu-active');
+            dropMenu.classList.add('drop__menu_active');
             btn.style.color = '#FFFFFF';
 
 
@@ -76,5 +76,38 @@ window.addEventListener('DOMContentLoaded', function() {
         
     });
 
+    // Гамбургер
+    var countVar = 0;
+    $('.hamburger').click( function() {
+        countVar +=1;
+        if(countVar % 2 !== 0) {
+            changeClass();
+            $(".nav-catalog__list_active").slideDown("slow");
+        } else {
+            $(".nav-catalog__list_active").slideUp("slow");
+            changeClass();
+        }
+    });
+    function changeClass() {
+        $('.hamburger').toggleClass('hamburger_active');
+        $('.nav-catalog__title').toggleClass('nav-catalog__title_active');
+        $('.nav-catalog__list').toggleClass('nav-catalog__list_active');
+    }
+
+    // Фиксированная боковая панель
+    // $(function() {
+    //     const parent = $('#main');
+    //     const contentSideOffset = $('#content-side').offset().top;
+    //     const asideFixedTopClassName = 'aside-fixed--top';
+
+    //     $(window).scroll(function() {
+    //         const screlled = $(this).scrollTop();
+    //         if(screlled > contentSideOffset) {
+    //             parent.addClass(asideFixedTopClassName);
+    //         } else if (screlled < contentSideOffset) {
+    //             parent.removeClass(asideFixedTopClassName);
+    //         }
+    //     });
+    // });
 
 });

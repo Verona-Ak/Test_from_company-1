@@ -1,19 +1,34 @@
 .nav-catalog {
-    padding: 26px 14px 34px 28px;
-    width: 260px;
-    height: 814px;
+    position: relative;
     background-color: #BED1E1;
     border-radius: 3px;
     &__title {
-        font-weight: 500;
-        font-size: 24px;
-        color: #404040;
+        padding: 26px 14px 0 28px;
+        width: 260px;
+        height: 74px;
+        background-color: #BED1E1;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        h2 {
+            font-weight: 500;
+            font-size: 24px;
+            color: #404040;
+        }
     }
     &__list {
-        margin-top: 25px;
+        display: block;
+        width: 260px;
+        padding: 0 14px 34px 28px;
+        height: 740px;
+        background-color: #BED1E1;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
     }
     &__item {
         margin-top: 23px;
+        &:first-child {
+            margin-top: 0;
+        }
     }
     &__link {
         h5 {
@@ -33,4 +48,7 @@
         color: #404040;
         cursor: pointer;
     }
+}
+.hamburger {
+    display: none;
 }

@@ -1,4 +1,8 @@
 .header {
+    &__container {
+        justify-content: space-between;
+        align-items: center;
+    }
     &__inf {
         background-color: #EBEDEE;
         height: 40px;
@@ -78,6 +82,7 @@
         
     }
     &__center-block {
+        width: 520px;
         margin-bottom: 20px;
         display: flex;
         flex-direction: column;
@@ -86,7 +91,7 @@
         margin-left: 57px;
     }
     &__text {
-        width: 520px;
+        width: 100%;
         font-size: 16px;
         line-height: 21px;
         letter-spacing: 0.02em;
@@ -94,6 +99,7 @@
     }
     &__form {
         margin-top: 13px;
+        width: 100%;
     }
     &__nav {
         background-color: #E1CEBE;

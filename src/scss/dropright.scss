@@ -18,12 +18,12 @@
         position: absolute;
         top: -22px;
         left: 232px;
-        z-index: 2;
+        z-index: 3;
         width: 268px;
         height: 168px;
         padding: 9px 13px 9px 25px;
         background-color: #fff;
-        &-active {
+        &_active {
             display: block;
         }
     }

@@ -1,7 +1,11 @@
 .nav {
     margin: 0 auto;
+    width: 1097px;
+    height: 100%;
     &__list {
+        width: 100%;
         display: flex;
+        justify-content: space-between;
         align-items: center;
     }
     &__link  {
@@ -10,6 +14,8 @@
         padding: 10px 0;
         width: 164px;
         height: 41px;
+        border-radius: 3px;
+        background-color: #ffffff;
         h4 {
             font-weight: 500;
             font-size: 16px;
