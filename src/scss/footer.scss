@@ -1,46 +1,59 @@
 .footer {
     background-color: #BED1E1;
-    height: 231px;
-    &__logo {
+    max-height: 231px;
+    &__container {
+        margin: 0 auto;
+        width: 1115px;
+    }
+    &__logo-brand {
         display: block;
         width: 127px;
         height: 101px;
     }
     &__top {
         height: 130px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 17px 0 12px;
     }
     &__bottom {
+        padding: 18.5px 0 30.5px;
         height: 101px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
     }
     &__line {
         margin: 0 auto;
-        width: 1115px;
         height: 1px;
         background-color:rgba(255, 255, 255, 0.2);
     }
     &__politics {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: start;
+        width: 566px;
     }
     &__copyright {
         font-size: 12px;
         color: #404040;
+        &-sm {
+            display: none;
+            line-height: 1;
+        }
     }
     &__descr {
-        width: 566px;
         margin-top: 10px;
         font-size: 12px;
         line-height: 14px;
         color: #404040;
+        &-sm {
+            display: none;
+            line-height: 1;
+        }
     }
     &__kontur {
-        height: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
     }
     &__tagline {
         font-family: 'M PLUS 1p', sans-serif;

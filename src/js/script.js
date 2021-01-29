@@ -95,19 +95,13 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 
     // Фиксированная боковая панель
-    // $(function() {
-    //     const parent = $('#main');
-    //     const contentSideOffset = $('#content-side').offset().top;
-    //     const asideFixedTopClassName = 'aside-fixed--top';
-
-    //     $(window).scroll(function() {
-    //         const screlled = $(this).scrollTop();
-    //         if(screlled > contentSideOffset) {
-    //             parent.addClass(asideFixedTopClassName);
-    //         } else if (screlled < contentSideOffset) {
-    //             parent.removeClass(asideFixedTopClassName);
-    //         }
-    //     });
-    // });
-
+    var stickySidebar = new StickySidebar('#sidebar', {
+        topSpacing: 10,
+        bottomSpacing: 100,
+        containerSelector: '.main',
+        innerWrapperSelector: '.sidebar__inner',
+        resizeSensor: true,
+        stickyClass: 'is-affixed',
+        minWidth: 0
+    });
 });
