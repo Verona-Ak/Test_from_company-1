@@ -1,3 +1,6 @@
+.catalog {
+    display: none;
+}
 .nav-catalog {
     position: relative;
     background-color: #BED1E1;
@@ -45,10 +48,9 @@
         font-weight: 500;
         font-size: 14px;
         line-height: 19px;
-        color: #404040;
         cursor: pointer;
     }
-}
-.hamburger {
-    display: none;
+    &__hamburger {
+        display: none;
+    }
 }

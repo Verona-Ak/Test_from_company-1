@@ -4,6 +4,10 @@
         width: 100%;
         display: flex;
         justify-content: center;
+        color: #404040;
+        &_active {
+            color: #ffff;
+        }
     }
     &__img {
         position: absolute;
@@ -12,6 +16,10 @@
         display: block;
         width: 6px;
         height: 10px;
+        background: url('../img/main/aside/chevron-black.svg') center center/cover no-repeat;
+        &_active {
+            background: url('../img/main/aside/chevron-white.svg') center center/cover no-repeat;
+        }
     }
     &__menu {
         display: none;

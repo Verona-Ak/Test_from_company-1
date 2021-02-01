@@ -1,5 +1,9 @@
 .header {
     &__container {
+        margin: 0 auto;
+        width: 1097px;
+        height: 100%;
+        display: flex;
         justify-content: space-between;
         align-items: center;
     }
@@ -105,5 +109,7 @@
         background-color: #E1CEBE;
         height: 60px;
     }
-
+    &__hamburger {
+        display: none;
+    }
 }

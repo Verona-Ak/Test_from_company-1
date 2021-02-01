@@ -13,89 +13,93 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 
     // drop menu
-    let dropMenu = document.createElement('ul');
-    dropMenu.classList.add('drop__menu');
-
-    dropMenu.innerHTML = `<li class="drop__item"><a href="#" class="drop__link">Подкатегория</a></li><li class="drop__item"><a href="#" class="drop__link">Подкатегория ховер</a></li><li class="drop__item"><a href="#" class="drop__link">Длинное название подкатегории</a></li><li class="drop__item"><a href="#" class="drop__link">Подкатегория 2</a></li>`;
 
     const dropBtns = document.querySelectorAll('.drop__btn'),
-        arrows = document.querySelectorAll('.drop__img');
-    
+        arrows = document.querySelectorAll('.drop__img'),
+        menu = document.querySelectorAll('.drop__menu');
+
+    let windowInnerWidth;
+
     for (let btn of dropBtns) {
         btn.addEventListener('click', ()=> {
-            let count = 0;
-            while(count < dropBtns.length) {
-                clearStyle(dropBtns[count], arrows[count]);
-                count++;
+            windowInnerWidth = window.innerWidth;
+
+            if(windowInnerWidth > 575) {
+                for(let i = 0; i < dropBtns.length; i++) {
+                    if(dropBtns[i] !== btn) {
+                        removeClasses(dropBtns[i], arrows[i], menu[i]);
+                    }
+                    
+                }
             }
+            
 
-            let parent = btn.closest('li');
-            parent.appendChild(dropMenu);
-            dropMenu.classList.add('drop__menu_active');
-            btn.style.color = '#FFFFFF';
-
+            btn.classList.toggle('drop__btn_active');
 
             for(let i = 0; i < arrows.length; i++) {
-                if(arrows[i].closest('li') === parent) {
-                    arrows[i].src = 'img/main/aside/chevron-white.svg';
+                if(arrows[i].closest('li') === btn.closest('li')) {
+                    arrows[i].classList.toggle('drop__img_active');
+                }
+            }
+            
+            for(let i = 0; i < menu.length; i++) {
+                if(menu[i].closest('li') === btn.closest('li')) {
+                    menu[i].classList.toggle('drop__menu_active');
                 }
             }
         });
     }
-    function clearStyle(btn, arrow) {
-        btn.style.color = '';
-        arrow.src = 'img/main/aside/chevron-black.svg';
+
+    function removeClasses(btn, arrow, menu) {
+        btn.classList.remove('drop__btn_active');
+        arrow.classList.remove('drop__img_active');
+        menu.classList.remove('drop__menu_active');
     }
-
+    // Закрытие подкатегорий при клике в к-л точку на странице
     window.addEventListener('click', function(e) {
-        let index = true;
-        for(let btn of dropBtns) {
-            if(e.target && e.target === btn) {
-                index = !index;
-                break;
-            }
-        }
-        if(index) {
-            for(let item of dropBtns) {
-                item.style.color = '';
-            }
-            for(let arrow of arrows) {
-                arrow.src = 'img/main/aside/chevron-black.svg';
-            }
-            try{
-                dropMenu.classList.remove('drop__menu-active');
-                let parent = dropMenu.closest('li');
-                parent.removeChild(dropMenu);
-            } catch(e) {
-                console.log(`Поймана ошибка: ${e}`);
+        windowInnerWidth = window.innerWidth;
 
-                
+        if(windowInnerWidth > 575) {
+            let index = true;
+            for(let btn of dropBtns) {
+                if(e.target && e.target === btn) {
+                    index = !index;
+                    break;
+                }
             }
-            
+            if(index) {
+                for(let i = 0; i < dropBtns.length; i++) {
+                    removeClasses(dropBtns[i], arrows[i], menu[i]);
+                }
+            }
         }
-        
     });
+
 
     // Гамбургер
     var countVar = 0;
-    $('.hamburger').click( function() {
+    $('.nav-catalog__hamburger').click( function() {
         countVar +=1;
+        
         if(countVar % 2 !== 0) {
             changeClass();
             $(".nav-catalog__list_active").slideDown("slow");
         } else {
             $(".nav-catalog__list_active").slideUp("slow");
             changeClass();
+            for(let i = 0; i < dropBtns.length; i++) {
+                removeClasses(dropBtns[i], arrows[i], menu[i]);
+            }
         }
     });
     function changeClass() {
-        $('.hamburger').toggleClass('hamburger_active');
+        $('.nav-catalog__hamburger').toggleClass('nav-catalog__hamburger_active');
         $('.nav-catalog__title').toggleClass('nav-catalog__title_active');
         $('.nav-catalog__list').toggleClass('nav-catalog__list_active');
     }
 
     // Фиксированная боковая панель
-    var stickySidebar = new StickySidebar('#sidebar', {
+    let stickySidebar = new StickySidebar('#sidebar', {
         topSpacing: 10,
         bottomSpacing: 100,
         containerSelector: '.main',
@@ -104,4 +108,24 @@ window.addEventListener('DOMContentLoaded', function() {
         stickyClass: 'is-affixed',
         minWidth: 0
     });
+
+
+    // Hamburger в шапке
+    const hamburgerHeader = document.querySelector('.header__hamburger'),
+        navList = document.querySelector('.nav__list'),
+        navItems = document.querySelectorAll('.nav__item');
+
+
+    hamburgerHeader.addEventListener('click', function() {
+        hamburgerHeader.classList.toggle('header__hamburger_active');
+        navList.classList.toggle('nav__list_active');
+    });
+
+    for(let item of navItems) {
+        item.addEventListener('click', function(e) {
+            hamburgerHeader.classList.remove('header__hamburger_active');
+            navList.classList.remove('nav__list_active');
+        });
+    }
+    
 });
